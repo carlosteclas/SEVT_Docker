@@ -1,0 +1,18 @@
+docker volume create MySEVTVolume
+
+docker volume ls
+
+docker container run --name MyPVContainer -v MySEVTVolume:/home
+
+cd home
+mkdir MyDockerDirectory
+touch 1
+touch 2
+touch 3
+
+exit
+
+docker container run --name MyPVContainer2 -v MySEVTVolume:/home
+cd /home
+ls
+
