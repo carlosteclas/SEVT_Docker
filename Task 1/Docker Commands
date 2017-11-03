@@ -1,0 +1,18 @@
+
+Copy and paste these commands on your Terminal to experience Docker faster :)
+
+Command 1: Create a Centos Container with Interactive mode on a TTY terminal named MySEVTContainer
+
+  docker container run -ti --name MySEVTContainer centos
+  
+Hint: If you type exit once inside the container, the container stops. If you type the sequence Ctrl+P Ctrl + Q you can exit and keep it running
+
+Command 2: Same container as before but with detached mode (running in the background)
+ 
+ docker container run -ti -d --name MySEVTContainerDetached centos
+
+Hint: You can access that container with the following command
+  docker attach MySEVTContainerDetached
+  
+  
+
