@@ -1,0 +1,6 @@
+
+docker ls
+
+docker search
+
+docker image pull
