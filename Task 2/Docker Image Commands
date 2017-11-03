@@ -1,6 +1,17 @@
+Copy and paste these commands on your Terminal to experience Docker faster :)
 
-docker ls
+Command 1: List the docker images that exist locally on your computer/server
 
-docker search
+  docker image ls
 
-docker image pull
+Command 2: Search for specific nginx docker images in your repository (Docker Hub in this case)
+
+  docker search nginx
+
+Command 3: Download nginx image to your computer/server
+
+  docker image pull nginx
+
+Command 4: Inspect the specifications for the recently downloaded image
+
+  docker image inspect nginx
