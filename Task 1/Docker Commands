@@ -14,5 +14,8 @@ Command 2: Same container as before but with detached mode (running in the backg
 Hint: You can access that container with the following command
   docker attach MySEVTContainerDetached
   
+Command 3: List your active containers (add the -a option if you want to see stopped containers as well)
+  docker container ls
+  
   
 
