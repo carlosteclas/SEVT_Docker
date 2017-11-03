@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: svc-test-1
+spec:
+  selector:
+    app: web-front-end
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: web-port
