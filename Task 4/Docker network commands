@@ -1,0 +1,12 @@
+docker network create --subnet 192.168.100.0/24 --gateway 192.168.100.1 -d bridge MySEVTNetwork
+
+docker run -it -d --network MySEVTNetwork --name MyNetworkContainer centos
+
+docker run -it -d --network MySEVTNetwork --name MyNetworkContainer2 centos
+
+docker network inspect MySEVTNetwork
+
+docker attach MyNetworkContainer
+
+ping MyNetworkContainer2
+
