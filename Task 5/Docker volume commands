@@ -1,3 +1,5 @@
+Copy and paste these commands on your Terminal to experience Docker faster :)
+
 docker volume create MySEVTVolume
 
 docker volume ls
