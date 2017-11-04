@@ -1,6 +1,16 @@
 
 Copy and paste these commands on your Terminal to experience Docker faster :)
 
-docker image build -t {yourusername/myfirstsevtimage}
-docker run -p 6453:8000 -d --name MyContainerwithMySEVTImage {yourusername/myfirstsevtimage}
-docker image push {yourusername/myfirstsevtimage}
+Command 1: Out of your Dockerfile, build your first docker image. Please change the value in {} for your desired value
+  
+  docker image build -t {yourusername/myfirstsevtimage} .
+
+Command 2: Run a container using your recently created docker image. Please change the value in {} for your specified value
+  
+  docker run -p 6453:8000 -d --name MyContainerwithMySEVTImage {yourusername/myfirstsevtimage}
+
+Hint: You may change -p for -P if you don't want to statically map outide port:inside port.
+
+Command 3: You can then push your image to the Docker Hub Public Repository for anybody to use
+
+  docker image push {yourusername/myfirstsevtimage}
