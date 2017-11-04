@@ -1,3 +1,6 @@
+
+Copy and paste these commands on your Terminal to experience Docker faster :)
+
 docker image build -t {yourusername/myfirstsevtimage}
 docker run -p 6453:8000 -d --name MyContainerwithMySEVTImage {yourusername/myfirstsevtimage}
 docker image push {yourusername/myfirstsevtimage}
