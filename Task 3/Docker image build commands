@@ -14,3 +14,4 @@ Hint: You may change -p for -P if you don't want to statically map outide port:i
 Command 3: You can then push your image to the Docker Hub Public Repository for anybody to use
 
   docker image push {yourusername/myfirstsevtimage}
+
