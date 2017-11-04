@@ -1,18 +1,30 @@
 Copy and paste these commands on your Terminal to experience Docker faster :)
 
-docker volume create MySEVTVolume
+Command 1: Create a docker volume
 
-docker volume ls
+  docker volume create MySEVTVolume
 
-docker container run --name MyPVContainer -v MySEVTVolume:/home
+Command 2: List your locally available volumes
+
+  docker volume ls
+
+Command 3: Run a container and mount your recently created volume to it in its /home. Anything you store at /home will be stored persistently in your volume
+
+  docker container run --name MyPVContainer -v MySEVTVolume:/home
+  
+Command 4 (set of commands): Inside the container, go to /home and create a new directory plus 3 empty files using the command touch. Then exit the container
 
 cd home
+ls
 mkdir MyDockerDirectory
 touch 1
 touch 2
 touch 3
+ls
 
 exit
+
+Command 5: Now, run a new container and mount the same volume to it. The directory and files you created on the previous step should be there
 
 docker container run --name MyPVContainer2 -v MySEVTVolume:/home
 cd /home
