@@ -1,0 +1,3 @@
+docker image build -t {yourusername/myfirstsevtimage}
+docker run -p 6453:8000 -d --name MyContainerwithMySEVTImage {yourusername/myfirstsevtimage}
+docker image push {yourusername/myfirstsevtimage}
