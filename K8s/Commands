@@ -1,1 +1,6 @@
-kubectl run myfirstK8deployment --image=ccampost/sevtweb --port=8080
+These are the commands I used to show the K8 comparison vs Docker Swarm
+
+Command 1: Runs a deployment which creates a Pod using our sevtweb docker image as the base and uses port 8080
+
+  kubectl run myfirstK8deployment --image=ccampost/sevtweb --port=8080
+
