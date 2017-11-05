@@ -1,0 +1,1 @@
+kubectl run myfirstK8deployment --image=ccampost/sevtweb --port=8080
