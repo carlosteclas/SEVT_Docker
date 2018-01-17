@@ -1,0 +1,20 @@
+Copy and paste these commands on your Terminal to experience Docker faster :)
+
+Command 1: Create a docker bridged network which will use 192.168.100.0 as their IPAM network and define 192.168.100.1 as gateway
+  docker network create --subnet 192.168.100.0/24 --gateway 192.168.100.1 -d bridge MySEVTNetwork
+  
+  Hint: docker network inspect will show you the specification for your newly created network
+
+Command 2: Create 2 new containers in detached mode and add them to your recently created network
+  docker run -it -d --network MySEVTNetwork --name MyNetworkContainer centos
+  docker run -it -d --network MySEVTNetwork --name MyNetworkContainer2 centos
+  
+Command 3: Check that your containers are now part of the network specification you created
+  docker network inspect MySEVTNetwork
+
+Command 4: Log into one of your recently created containers and check connectivity via IP address or name. Verify there is connectivity to the Internet proving NAT is working on your host automatically
+  
+  docker attach MyNetworkContainer
+
+  Hint: ping MyNetworkContainer2 or ping www.yahoo.com
+

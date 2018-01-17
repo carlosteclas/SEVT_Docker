@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: deploy-test-1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: web-front-end
+        version: v1
+    spec:
+      containers:
+      - name: tiny-web-server-1
+        image: jonlangemak/web1_8080
+        ports:
+        - containerPort: 8080
+          name: web-port
+          protocol: TCP

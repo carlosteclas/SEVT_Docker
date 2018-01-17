@@ -1,4 +1,4 @@
-# SEVT_Docker
+SEVT & Cisco Live Docker Session
 
 Welcome to the "Learn Docker and Cisco's DC cross-architectural value" session!!
 
